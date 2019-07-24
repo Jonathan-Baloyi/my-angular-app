@@ -1,22 +1,28 @@
-<header>
-  <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+<header id = "page-hero" class="site-header">
+  <nav class="navbar family-sans text-uppercase navbar-expand-md bg-secondary navbar-dark">
 
     <div class="container-fluid">
 
       <a class="navbar-brand" href="#page-hero">
         <i class="fa fa-cube"></i> Layout Components</a>
 
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="#page-hero">home</a>
-        <a class="nav-item nav-link" href="#page-multicolumn">columns</a>
-        <a class="nav-item nav-link" href="#page-media">media</a>
-        <a class="nav-item nav-link" href="#page-photogrid">grid</a>
-        <a class="nav-item nav-link" href="#page-carousel">carousel</a>
-        <a class="nav-item nav-link" href="#page-nested">nested</a>
-        <a class="nav-item nav-link" href="#page-icons">icons</a>
-        <a class="nav-item nav-link" href="#page-floater">floater</a>
-        <a class="nav-item nav-link" href="#page-cards">cards</a>
-      </div>
+        <button type="button" class="navbar-toggler" (click)="isShown = !isShown" [attr.aria-expanded]="isShown" data-toggle="collapse" data-target="#myToggleNav" aria-controls="#myToggleNav" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <section class="collapse navbar-collapse" [ngClass]="{ 'show': isShown }" id="myToggleNav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#page-hero">home</a>
+            <a class="nav-item nav-link" href="#page-multicolumn">columns</a>
+            <a class="nav-item nav-link" href="#page-media">media</a>
+            <a class="nav-item nav-link" href="#page-photogrid">grid</a>
+            <a class="nav-item nav-link" href="#page-carousel">carousel</a>
+            <a class="nav-item nav-link" href="#page-nested">nested</a>
+            <a class="nav-item nav-link" href="#page-icons">icons</a>
+            <a class="nav-item nav-link" href="#page-floater">floater</a>
+            <a class="nav-item nav-link" href="#page-cards">cards</a>
+          </div>
+    </section>
 
     </div>
 
